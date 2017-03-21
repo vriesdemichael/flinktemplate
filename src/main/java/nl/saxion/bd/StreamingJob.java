@@ -7,12 +7,14 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
-//TODO Change the name of the class
+//TODO Change the name of the class (USING REFACTORING!)
 public class StreamingJob {
+private static final String JOBNAME = "Streaming Job";
 
+
+private static final String PROPERTIES_PATH = "flinkJob.properties";
 private static final Logger LOG = LoggerFactory.getLogger(StreamingJob.class);
 
-    private static final String PROPERTIES_PATH = "flinkJob.properties";
 
     public static void main(String[] args) throws Exception {
 
@@ -87,7 +89,6 @@ private static final Logger LOG = LoggerFactory.getLogger(StreamingJob.class);
 		 */
 
 		// execute program
-        // TODO change the name of the job
-		env.execute("TODO");
+		env.execute(JOBNAME);
     }
 }
